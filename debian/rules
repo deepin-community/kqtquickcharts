@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --with kf5
+
+override_dh_auto_install:
+	dh_auto_install
+	# remove development files
+	rm -rf debian/qml-module-org-kde-charts/usr/include/
+	rm -rf debian/qml-module-org-kde-charts/usr/lib/*/cmake/

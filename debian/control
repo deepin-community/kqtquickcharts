@@ -1,0 +1,30 @@
+Source: kqtquickcharts
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+Build-Depends: cmake (>= 3.5~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 1.1.0~),
+               pkg-kde-tools,
+               qtbase5-dev (>= 5.2.0~),
+               qtdeclarative5-dev (>= 5.2.0~),
+Standards-Version: 4.5.1
+Homepage: https://invent.kde.org/libraries/kqtquickcharts
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kqtquickcharts
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kqtquickcharts.git
+Rules-Requires-Root: no
+
+Package: qml-module-org-kde-charts
+Architecture: any
+Section: libs
+Depends: qml-module-qtquick-controls2,
+         qml-module-qtquick2,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Multi-Arch: same
+Description: QtQuick plugin to render interactive charts
+ A QtQuick plugin to render beautiful and interactive charts.
+ .
+ kqtquickcharts is part of KDE Applications.
